@@ -1,6 +1,4 @@
-import { deleteToo } from "@/components/deleteToo";
 import Logout from "@/components/Logout";
-import { deleteCookie, deleteToken, saveToken } from "@/mutation/serverActions";
 import { customFetch } from "@/network/fetcher";
 
 export default async function page() {

@@ -1,5 +1,5 @@
 "use client";
-import { deleteToken, getToken, saveToken } from "@/mutation/serverActions";
+import {  getToken } from "@/mutation/serverActions";
 import { logout, userData } from "@/slices/loginSlice";
 import { Button, Form, Input, message } from "antd";
 import { useRouter } from "next/navigation";
@@ -16,17 +16,14 @@ export default function Login() {
   console.log(status?.user, "userStatus");
 
   useEffect(() => {
-    if (userStatus === "failed" || userStatus === "succeeded") {
-      {
-        checkUser();
-      }
-    }
+    checkUser();
   }, [userStatus]);
 
   const checkUser = async () => {
     const token = await getToken();
 
     if (token?.value) {
+      message.success("Login successful");
       router.push("/dashboard");
     } else if (
       status?.status === "succeeded" &&
@@ -34,7 +31,7 @@ export default function Login() {
       !token?.value
     ) {
       message.error("please check your email or password");
-      dispatch(logout())
+      dispatch(logout());
     }
   };
 
