@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a full-stack application that includes a **login system**, It leverages **Next.js** for server-side rendering, **Redux Toolkit** for state management, and **Tailwind CSS** for responsive design.
+This project is a full-stack application that includes a **login system**, It leverages **Next.js** for server-side rendering, **Redux Toolkit** for state management, Thunk for handling asynchronous actions and **Tailwind CSS** for responsive design.
 
 ---
 
@@ -13,6 +13,7 @@ This project is a full-stack application that includes a **login system**, It le
 - Users can log in using email `dev.aert@gmail.com` and password `helloworld`.
 - The login is handled through server-side actions and an API route to verify credentials.
 - **Redux Toolkit** is used for state management, storing the logged-in email and making it accessible across the entire application.
+- **Thunk middleware** is used for handling asynchronous logic, such as making API requests to verify the login credentials.
 
 ### Responsive Design
 
@@ -25,6 +26,7 @@ This project is a full-stack application that includes a **login system**, It le
 - **Next.js**: Server-side rendering and API routes.
 - **React**: For building the user interface.
 - **Redux Toolkit**: For managing state across the application (e.g., storing user login data).
+- **Thunk**: Used for handling asynchronous actions such as API requests within the Redux state management.
 - **Tailwind CSS**: For responsive design and styling.
 
 ---
